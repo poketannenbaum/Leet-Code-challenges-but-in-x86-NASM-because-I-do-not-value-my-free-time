@@ -10,7 +10,7 @@ section .data
     anotherpointer dd 0
 section .text
 global main
-extern io_print_string, io_get_string, io_get_dec
+extern io_print_string, io_get_string, io_print_dec
 
     main:
         mov ebp, esp; for correct debugging ;HERE WE GO LADS

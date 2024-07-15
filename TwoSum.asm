@@ -41,7 +41,6 @@ extern io_print_string, io_get_string, io_print_dec
         xor edx, edx ;FLUSH
         xor esi, esi ;FLUSH
         xor edi, edi ;FLUSH
-        xor esp, esp ;FLUSH
         jmp find_out ;Finally
         
         

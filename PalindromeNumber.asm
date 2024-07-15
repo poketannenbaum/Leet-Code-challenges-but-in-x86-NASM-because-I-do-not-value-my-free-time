@@ -7,7 +7,9 @@ section .data
 section .text
 global main
 extern io_print_string, io_get_dec
+
     main:
+    mov ebp, esp
         mov esi, 0
         mov eax, prompt1
         call io_print_string
@@ -15,6 +17,8 @@ extern io_print_string, io_get_dec
         call io_get_dec
         mov ebx, basenum
         mov [ebx], eax
+        cmp eax, 0
+        jle negative
     readd:
         xor ebx, ebx
         xor edx, edx
@@ -30,6 +34,7 @@ extern io_print_string, io_get_dec
         mov ebx, basenum
         cmp [ebx], esi
         je palindrome
+    negative:
         mov eax, prompt2
         call io_print_string
         jmp end

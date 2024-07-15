@@ -33,7 +33,6 @@ extern io_print_string, io_get_string, io_print_dec
         mov ebx, [ebx]
         jmp find_out
         
-        
     parse_number:
         xor eax, eax
         xor ebx, ebx
@@ -90,14 +89,17 @@ extern io_print_string, io_get_string, io_print_dec
         mov eax, arraybutint
         add eax, ecx
         jmp find_out
+
     win:
         mov eax, prompt2
         call io_print_string
         jmp end
+
     zero:
         mov eax, prompt3
         call io_print_string
         jmp end
+
     end:
         ret 1
         

@@ -13,8 +13,6 @@ global main
 extern io_print_string, io_get_string, io_print_dec
 
     main:
-        mov ebp, esp; for correct debugging ;HERE WE GO LADS
-        mov ebp, esp; for correct debugging
         mov eax, prompt1 ;Move the prompt into the register this thing reads from
         call io_print_string ;Read the thing from the register
         mov eax, arrayinput ;Where in memory to put the string

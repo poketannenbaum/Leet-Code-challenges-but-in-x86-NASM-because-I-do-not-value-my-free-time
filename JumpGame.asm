@@ -15,10 +15,6 @@ extern io_print_string, io_get_string, io_print_dec
         mov eax, arrayinput
         mov edx, 256
         call io_get_string
-        mov eax, prompt2
-        call io_print_string
-        mov eax, targetinput
-        call io_get_string
         mov edi, arrayinput
         call parse_number
         mov esi, anotherpointer
